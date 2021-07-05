@@ -42,7 +42,7 @@ const dieRoll = function(chance) {
 };
 
 const randomItem = function(arr) {
-  const idx = Math.floor(Math.random() * arr.length - 1);
+  const idx = Math.floor(Math.random() * arr.length);
   return arr[idx];
 };
 
