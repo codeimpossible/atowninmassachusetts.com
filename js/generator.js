@@ -55,3 +55,21 @@ const getTown = function() {
   return town;
 };
 
+const DOMReady = function(a, b, c) {
+  b = document
+  c = 'addEventListener'
+  b[c] ? b[c]('DOMContentLoaded', a) : window.attachEvent('onload', a)
+}
+
+let KEY = 'AIzaSyDa1kC1AW0Xtr6f7DK7Gi4_1XPnlfYg5Ts';
+DOMReady(function () {
+  let place = `${randomItem(towns)} Massachusetts, USA`;
+  let mode = 'place';
+  let url = `https://www.google.com/maps/embed/v1/${mode}?key=${KEY}&q=${place}`;
+
+  console.log(url);
+
+  document.querySelector('#town').innerText = getTown();
+  document.querySelector('#map').setAttribute('src', url);
+});
+

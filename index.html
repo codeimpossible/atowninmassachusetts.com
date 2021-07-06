@@ -5,13 +5,35 @@
   <title>Welcome | A Town In Massachusetts</title>
   <script type="text/javascript" src="js/generator.js"></script>
   <style>
-    h1 {
+    h1#town {
       text-align: center;
       padding-top: 290px;
+      position: absolute;
+      z-index: 10000;
+      width: 100%;
+      font-size: 10em;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 0;
     }
   </style>
 </head>
 <body>
-  <h1><script>document.write(getTown());</script></h1>
+  <h1 id="town"></h1>
+
+  <iframe
+    id="map"
+    frameborder="0" style="border:0"
+    src="">
+  </iframe>
+
 </body>
+<script src="key.js"></script>
 </html>
