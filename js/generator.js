@@ -10,7 +10,7 @@ const suffixes = [
   'ston',
   'field',
   'ham',
-  ' Plains'
+  ' Plain'
 ];
 
 const words = [
@@ -33,6 +33,7 @@ const prefixes = [
   'Vicks',
   'Fitch',
   'Leo',
+  'Wo',
   ''
 ];
 
