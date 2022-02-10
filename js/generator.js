@@ -10,7 +10,8 @@ const suffixes = [
   'ston',
   'field',
   'ham',
-  ' Plain'
+  ' Plain',
+  'ie',
 ];
 
 const words = [
@@ -21,7 +22,22 @@ const words = [
   'Dirty',
   'Sling',
   'Wang',
-  'Junk'
+  'Junk',
+  'Tool',
+  'LarryBird',
+  'McHale',
+  'Garden',
+  'CamNeely',
+  'LandsDown',
+  'TedWilliams',
+  'Brady',
+  'Bellichick',
+  'Celtics',
+  'Sox',
+  'Bruins',
+  'Patriots',
+  'Clicker',
+  'Dunks',
 ];
 
 const prefixes = [
@@ -34,7 +50,7 @@ const prefixes = [
   'Fitch',
   'Leo',
   'Wo',
-  ''
+  '',
 ];
 
 const dieRoll = function(chance) {
