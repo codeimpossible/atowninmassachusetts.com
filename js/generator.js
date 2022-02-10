@@ -85,7 +85,7 @@ DOMReady(function () {
     let place = `${randomItem(towns)} Massachusetts, USA`;
     let mode = 'place';
     url = `https://www.google.com/maps/embed/v1/${mode}?key=${KEY}&q=${place}`;
-    window.location.hash = window.bota(JSON.stringify({ url, townName }));
+    window.location.hash = window.btoa(JSON.stringify({ url, townName }));
   }
   
   document.querySelector('#town').innerText = townName;
