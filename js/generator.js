@@ -68,7 +68,7 @@ DOMReady(function () {
   var townName;
 
   if (window.location.hash) {
-    var code = window.location.hash;
+    var code = window.location.hash.substr(1);
     var json = window.atob(code);
     try {
       var data = JSON.parse(json);
