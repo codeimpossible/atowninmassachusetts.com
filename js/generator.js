@@ -64,13 +64,28 @@ const DOMReady = function(a, b, c) {
 
 let KEY = 'AIzaSyDa1kC1AW0Xtr6f7DK7Gi4_1XPnlfYg5Ts';
 DOMReady(function () {
-  let place = `${randomItem(towns)} Massachusetts, USA`;
-  let mode = 'place';
-  let url = `https://www.google.com/maps/embed/v1/${mode}?key=${KEY}&q=${place}`;
+  var url; 
+  var townName;
 
-  console.log(url);
-
-  document.querySelector('#town').innerText = getTown();
+  if (window.location.hash) {
+    var code = window.location.hash;
+    var json = window.btoa(code);
+    try {
+      { url, townName } = JSON.parse(json);
+    } catch(e) {
+      console.error(e);
+    }
+  }
+  
+  if (!url || !townName) {
+    townName = getTown();
+    let place = `${randomItem(towns)} Massachusetts, USA`;
+    let mode = 'place';
+    url = `https://www.google.com/maps/embed/v1/${mode}?key=${KEY}&q=${place}`;
+    window.location.hash = window.atob(JSON.stringify({ url, townName }));
+  }
+  
+  document.querySelector('#town').innerText = townName;
   document.querySelector('#map').setAttribute('src', url);
 });
 
