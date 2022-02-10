@@ -71,7 +71,10 @@ DOMReady(function () {
     var code = window.location.hash;
     var json = window.btoa(code);
     try {
-      { url, townName } = JSON.parse(json);
+      var data = JSON.parse(json);
+      url = data.url;
+      townName = data.townName;
+      console.log(data);
     } catch(e) {
       console.error(e);
     }
