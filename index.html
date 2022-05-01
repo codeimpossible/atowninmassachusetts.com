@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Welcome | A Town In Massachusetts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/generator.js"></script>
   <style>
     body {
@@ -16,6 +19,7 @@
       width: 100%;
       word-wrap: break-word;
       font-size: clamp(2rem, 10vw, 10rem);
+      font-family: 'Varela Round', sans-serif;
     }
 
     iframe {
@@ -39,17 +43,16 @@
       color: white;
       text-decoration: none;
     }
+    
+    .place-card {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <h1 id="town"></h1>
   <a href="/" class="btn-discover">🔎 Discover another town</a>
-
-  <iframe
-    id="map"
-    frameborder="0" style="border:0"
-    src="">
+  <iframe id="map" frameborder="0" style="border:0" src="">
   </iframe>
-
 </body>
 </html>
